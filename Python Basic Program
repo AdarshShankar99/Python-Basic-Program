@@ -1,0 +1,12 @@
+-: Basic Programming :- 
+================================================================ 
+Brick 1) How to swap two variables with the help of third variable. 
+Program: - 
+a=int(input()) 
+b=int(input()) 
+print(f"Before swaping a={a} and b={b}") 
+c=a         #It can make in one line also (a,b=b,a) 
+a=b 
+b=c 
+print(f"After swaping a={a} and b={b}") 
+================================================================ 
