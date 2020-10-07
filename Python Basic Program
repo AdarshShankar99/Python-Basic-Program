@@ -10,3 +10,304 @@ a=b
 b=c 
 print(f"After swaping a={a} and b={b}") 
 ================================================================ 
+Brick 2) How to swap two variables without third variable. 
+Program: - 
+a=int(input()) 
+b=int(input()) 
+print(f"Before swaping a={a} and b={b}") 
+a=a+b          
+b=a-b 
+a=a-b 
+print(f"After swaping a={a} and b={b}") 
+================================================================ 
+Brick 3) How to swap three variables without help of fourth variable. 
+Program: - 
+a=int(input()) 
+b=int(input()) 
+c=int(input()) 
+print(f"Before swaping a={a} and b={b} and c={c}") 
+a=a+b+c 
+b=a-b-c 
+c=a-b-c 
+a=a-b-c 
+print(f"After swaping a={a} and b={b} and c={c}") 
+================================================================ 
+Brick 4) WAP to find the sum of digit of the given number. 
+Program: - 
+n=int(input()) 
+sum=0 
+while n>0: 
+  sum=sum+n%10 
+  n=n//10 
+print(sum) 
+================================================================ 
+Brick 5) WAP to find whether the given number is palindrome or not. 
+Program: - 
+x=int(input()) 
+n=x 
+sum=0 
+while x>0: 
+ sum=(sum*10)+x%10 
+ x=x//10 
+if sum==n: 
+ print("Yes") 
+else: 
+ print("No") 
+brick 6) Find the factorial of a number. 
+Program:- 
+n=int(input()) 
+fact=1 
+while n>0: 
+fact=fact*n 
+n=n-1 
+print(fact) 
+================================================================ 
+Brick 7) Find the sum of an array element. 
+Program:- 
+l=[10,20,30,40,50] 
+sum=0 
+for i in l: 
+  sum+=i 
+print(sum) 
+================================================================ 
+Brick 8) Search a number given by user using Linear search. 
+Program:- 
+l=[10,20,30,40,50] 
+x=int(input()) 
+flag=0 
+for i in l: 
+  print("YES") 
+  flag=1 
+  break 
+if flag==0: 
+  print("NO") 
+================================================================ 
+Brick 9) Check whether a number is Perfect number or not. 
+Program:- 
+n=int(input()) 
+i=1 
+while i<=n/2: 
+  if n%i==0: 
+   sum+=i 
+  i=i+1 
+if sum==n: 
+  print("Yes") 
+else: 
+  print("No") 
+================================================================ 
+Brick 10) Check whether number is prime or not. 
+Program:- 
+n=int(input()) 
+if n<=1: 
+  print("Not Prime") 
+else: 
+  flag=0 
+  for i in range(2,n//2+1): 
+   if n%i==0: 
+    print("Not Prime") 
+    flag=1 
+    break 
+  if flag==0: 
+   print("Prime") 
+================================================================ 
+Brick 11) Find the sum of all prime numbers b/w given two numbers. 
+Program:- 
+def check_prime(n): 
+  if n<=1: 
+   return False 
+  else: 
+   for i in range(2,n//2+1): 
+    if n%i==0: 
+     return False 
+   return True 
+ 
+a=int(input()) 
+b=int(input()) 
+sum=0 
+for x in range(a,b+1): 
+  if check_prime(x)==True: 
+   sum+=x 
+print(sum) 
+brick 12) Find the nth prime number. 
+Program:- 
+import sys 
+max=sys.maxsize 
+def check_prime(n): 
+  for i in range(2,n//2+1): 
+   if n%i==0: 
+    return False 
+  return True 
+   
+n=int(input()) 
+if n<=1: 
+  print("Prime no not found") 
+else: 
+  count=0 
+  for x in range(2,max): 
+   if check_prime(x)==True: 
+    count+=1 
+   if count==n: 
+    print(x) 
+    break 
+Brick 13)Print the Fibonacci Series till the nth number. 
+Program:- 
+n=int(input()) 
+f1=0 
+f2=1 
+print(f1,f2,end=" ") 
+for i in range(n-2): 
+  f3=f1+f2 
+  f1=f2 
+  f2=f3 
+  print(f3,end=" ") 
+Brick 14) Check whether given number is Armstrong number or not. 
+Program:- 
+a=int(input()) 
+n=a 
+sum=0 
+while a>0: 
+  b=a%10 
+  sum+=b**3 
+  a=a//10 
+If sum==n: 
+  print("Yes") 
+else: 
+  print("No") 
+================================================================ 
+Brick 15) Check whether a number is Strong number or not. 
+Program:- 
+from math import factorial 
+n=int(input()) 
+a=n 
+sum=0 
+while n>0: 
+  b=n%10 
+  sum=sum+factorial(b) 
+  n=n//10 
+if sum==a: 
+  print("YES") 
+else: 
+  print("NO") 
+================================================================ 
+Brick 16) Check whether given year is leap year or not. 
+Program:- 
+year=int(input()) 
+if year%400==0: 
+  print("Leap year") 
+elif year%4==0 and year%100!=0: 
+  print("Leap year") 
+else: 
+  print("Not a leap year") 
+================================================================ 
+Brick 17) Check whether a number is Automorphic number or not. 
+Program:- 
+n=int(input()) 
+sq=n**2 
+flag=0 
+while n>0: 
+  if n%10!=sq%10: 
+   print("Not Automorphic") 
+   flag=1 
+   break 
+  n=n//10 
+  sq=sq//10 
+if flag==0: 
+  print("Automorphic") 
+================================================================ 
+Brick 18) Check whether a number is spy number or not. 
+Program:- 
+a=int(input()) 
+sum=0 
+prod=1 
+while a>0: 
+  b=a%10 
+  sum=sum+b 
+  prod=prod*b 
+  a=a//10 
+if sum==prod: 
+  print("Yes") 
+else: 
+  print("No") 
+================================================================ 
+Brick 19) Check whether given number is sunny number or not. 
+Program:- 
+import math 
+n=int(input()) 
+n=n+1 
+sqt=math.sqrt(n) 
+if sqt-math.floor(sqt)==0: 
+  print("Sunny no.") 
+else: 
+  print("Not a sunny number") 
+================================================================ 
+Brick 20) Check Whether given number is Pronic number or not. 
+Program:- 
+from math import sqrt 
+n=int(input()) 
+flag=0 
+for i in range(0,int(sqrt(n))+1): 
+  if i*(i+1)==n: 
+   print("Pronic number") 
+   flag=1 
+   break 
+if flag==0: 
+  print("Not pronic") 
+================================================================ 
+Brick 21) Check Whether given number is disarium number or not. 
+Program:- 
+n=a 
+count=0 
+while a>0: 
+  a=a//10 
+  count=count+1 
+a=n 
+sum=0 
+while a>0: 
+  b=a%10 
+  sum=sum+b**count 
+  a=a//10 
+  count=count-1 
+if sum==n: 
+  print("Disarium") 
+else: 
+  print("Not Disarium") 
+================================================================ 
+Brick 22) check whether number is fascinating number is not. 
+Program:- 
+ n=int(input()) 
+n1=n*2 
+n2=n*3 
+l=[0,0,0,0,0,0,0,0,0,0] 
+while n>0: 
+  b=n%10 
+  l[b]=l[b]+1 
+  n=n//10 
+while n1>0: 
+  b=n1%10 
+  l[b]=l[b]+1 
+  n1=n1//10 
+while n2>0: 
+  b=n2%10 
+  l[b]=l[b]+1 
+  n2=n2//10 
+flag=0 
+for i in range(1,10): 
+  if l[i]!=1: 
+   print("Not Fascinating") 
+   flag=1 
+   break 
+if flag==0: 
+  print("Facsinating")  
+================================================================ 
+Brick 23) Find the LCM and HCF of two given number. 
+Program:- 
+a=int(input()) 
+b=int(input()) 
+hcf=0 
+for i in range(1,min(a,b)+1): 
+  If a%i==0 and b%i==0: 
+   hcf=i 
+print(f"HCF is:{hcf}") 
+lcm=(a*b)//hcf 
+print(f"LCM is:{lcm}") 
+================================================================
